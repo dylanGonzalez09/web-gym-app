@@ -8,6 +8,14 @@ const SearchProvider = ({ children }) => {
   const [bodyParts, setBodyParts] = useState([]);
   const [bodyPart, setBodyPart] = useState("all");
 
+  // Detalles
+  const [exerciseDetail, setExerciseDetail] = useState({});
+  const [exercisesVideos, setExercisesVideos] = useState([]);
+
+  // Equipos / maquinas
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
+  const [equipmentExercises, setEquipmentExercises] = useState([]);
+
   return (
     <SearchContext.Provider
       value={{
@@ -15,10 +23,18 @@ const SearchProvider = ({ children }) => {
         setSearch,
         setExercises,
         setBodyParts,
+        setExerciseDetail,
+        setBodyPart,
+        setExercisesVideos,
+        setEquipmentExercises,
+        setTargetMuscleExercises,
+        targetMuscleExercises,
+        equipmentExercises,
         bodyParts,
         bodyPart,
-        setBodyPart,
         exercises,
+        exerciseDetail,
+        exercisesVideos,
       }}
     >
       {children}
